@@ -1,0 +1,12 @@
+
+apiVersion: v1
+kind: PersistentVolumeClaim #k8s must find the storage with following spec
+metadata:
+  name: database-persistent-volume-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  #storageclassname - we are using default one in local
